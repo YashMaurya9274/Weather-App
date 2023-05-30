@@ -5,7 +5,7 @@ import InformationPanel from "@/components/InformationPanel";
 import RainChart from "@/components/RainChart";
 import StatCard from "@/components/StatCard";
 import TempChart from "@/components/TempChart";
-import { fetchWeatherQuery } from "@/graphql/fetchWeatherQueries";
+import { fetchWeatherQuery } from "@/graphql/queries/fetchWeatherQueries";
 import cleanData from "@/lib/cleanData";
 import getBasePath from "@/lib/getBasePath";
 
@@ -57,7 +57,7 @@ async function WeatherPage({ params: { city, lat, long } }: Props) {
       <div className="flex-1 p-5 lg:p-10">
         <div className="p-5">
           <div className="pb-5">
-            <h2 className="text-xl font-bold">Today's Overview</h2>
+            <h2 className="text-xl font-bold">Todays Overview</h2>
             <p className="text-xs text-gray-400">
               Last Updated at:{" "}
               {new Date(results.current_weather.time).toLocaleString()}{" "}
